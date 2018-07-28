@@ -1,0 +1,21 @@
+spring:
+  application:
+     name: api-gateway
+
+server:
+  port: 8080   # HTTP (Tomcat) port
+
+zuul:
+  routes:
+    accounts-service:
+      path: /accountsApi/**
+      serviceId: accounts-service
+# Define the Eureka server that handles service registration
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+logging:
+  config: classpath:log4j2.yml
+  level.org.springframework: INFO

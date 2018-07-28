@@ -1,0 +1,15 @@
+# Configure this Discovery Server
+eureka:
+  instance:
+    hostname: localhost
+  client:  # Not a client, don't register with yourself (unless running
+           # multiple discovery servers for redundancy)
+    registerWithEureka: false
+    fetchRegistry: false
+
+server:
+  port: 1111   # HTTP (Tomcat) port
+
+logging:
+  config: classpath:log4j2.yml
+  level.org.springframework: INFO
