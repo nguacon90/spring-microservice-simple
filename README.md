@@ -1,5 +1,5 @@
 # spring-microservice-simple
-## Structure:
+## Flow to call service:
 * Web client => API gateway => microservices.
 
 ## How to run:
